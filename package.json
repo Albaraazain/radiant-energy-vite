@@ -1,0 +1,24 @@
+{
+  "name": "radiant-energy-vite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "@vitejs/plugin-legacy": "^5.4.2",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "lazysizes": "^5.3.2",
+    "lenis": "^1.1.14",
+    "scrolltrigger": "^1.0.1",
+    "vite": "^5.4.9"
+  }
+}

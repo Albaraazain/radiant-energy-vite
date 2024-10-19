@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729368461256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729368461256,
+            "name": "Commit-0",
+            "content": "// src/main.js\r\nimport jQuery from 'jquery';\r\nwindow.jQuery = window.$ = jQuery;\r\n\r\nimport './styles/main.css';\r\nimport { gsap } from 'gsap';\r\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\r\nimport Lenis from '@studio-freight/lenis';\r\nimport 'lazysizes';\r\n\r\nimport { initNavigation } from './components/navigation';\r\nimport { initSplash } from './components/splash';\r\nimport { initVideo } from './components/video';\r\nimport { initBall } from './components/ball';\r\nimport { initDiablo } from './components/diablo';\r\nimport { initCta } from './components/cta';\r\n\r\n// Import the Webflow-specific code\r\nimport './webflow-main.js';\r\n\r\ngsap.registerPlugin(ScrollTrigger);\r\n\r\nlet lenis; // Declare lenis here\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    initNavigation();\r\n    initSplash();\r\n    initVideo();\r\n    initBall();\r\n    initDiablo();\r\n    initCta();\r\n\r\n    // Initialize smooth scrolling\r\n    initSmoothScrolling();\r\n\r\n    // Any other initialization code...\r\n});\r\n\r\nfunction initSmoothScrolling() {\r\n    lenis = new Lenis({\r\n        duration: 1.5,\r\n        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),\r\n        direction: 'vertical',\r\n        gestureDirection: 'vertical',\r\n        smooth: true,\r\n        mouseMultiplier: 0.8,\r\n        smoothTouch: true,\r\n        touchMultiplier: 1.5,\r\n        infinite: false,\r\n    });\r\n\r\n    function raf(time) {\r\n        lenis.raf(time);\r\n        requestAnimationFrame(raf);\r\n    }\r\n\r\n    requestAnimationFrame(raf);\r\n\r\n    // Lenis and ScrollTrigger integration\r\n    lenis.on('scroll', ScrollTrigger.update);\r\n\r\n    gsap.ticker.add((time) => {\r\n        lenis.raf(time * 1000);\r\n    });\r\n\r\n    gsap.ticker.lagSmoothing(0);\r\n}\r\n\r\n// Expose lenis instance globally if needed\r\nwindow.lenis = lenis;"
+        }
+    ]
+}

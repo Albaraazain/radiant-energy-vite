@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729368561407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729368561407,
+            "name": "Commit-0",
+            "content": "# Logs\r\nlogs\r\n*.log\r\nnpm-debug.log*\r\nyarn-debug.log*\r\nyarn-error.log*\r\n\r\n# Dependency directories\r\nnode_modules/\r\n\r\n# Build output\r\ndist/\r\nbuild/\r\n\r\n# Vite cache\r\n.vite/\r\n\r\n# Local environment files\r\n.env\r\n.env.local\r\n.env.*.local\r\n\r\n# Editor directories and files\r\n.idea/\r\n.vscode/\r\n*.suo\r\n*.ntvs*\r\n*.njsproj\r\n*.sln\r\n*.sw?\r\n\r\n# MacOS files\r\n.DS_Store\r\n\r\n# Windows files\r\nThumbs.db"
+        }
+    ]
+}
