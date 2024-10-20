@@ -1,6 +1,6 @@
 import './styles/main.css';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import 'lazysizes';
 
 import { initNavigation } from './components/navigation';

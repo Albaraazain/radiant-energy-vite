@@ -8,12 +8,6 @@ export default defineConfig({
       additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
     }),
   ],
-  define: {
-    // Remove these lines as we'll handle jQuery differently
-    // 'window.jQuery': 'jQuery',
-    // 'window.$': 'jQuery',
-    global: "window",
-  },
   build: {
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -22,22 +16,24 @@ export default defineConfig({
     assetsDir: "assets",
     rollupOptions: {
       output: {
-        manualChunks: {
-          jquery: ["jquery"],
-          gsap: ["gsap"],
-          lenis: ["@studio-freight/lenis"],
-          lazysizes: ["lazysizes"],
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+          if (id.includes('src/components')) {
+            return 'components';
+          }
+          if (id.includes('src/smooth-scroll')) {
+            return 'smooth-scroll';
+          }
+          if (id.includes('src/webflow-main')) {
+            return 'webflow';
+          }
         },
       },
     },
   },
   optimizeDeps: {
-    include: ["jquery", "gsap", "@studio-freight/lenis", "lazysizes"],
-    exclude: ["webflow-main"],
-  },
-  resolve: {
-    alias: {
-      jquery: "jquery/dist/jquery.js",
-    },
+    include: ['jquery', 'gsap', '@studio-freight/lenis', 'lazysizes'],
   },
 });
