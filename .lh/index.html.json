@@ -1,0 +1,62 @@
+{
+    "sourceFile": "index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1729368834761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729369371839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,27 @@\n <!DOCTYPE html>\r\n <html lang=\"en\">\r\n-<head>\r\n-    <meta charset=\"UTF-8\">\r\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n+  <head>\r\n+    <meta charset=\"UTF-8\" />\r\n+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n     <title>Radiant Energy | Lighting design | Pakistan</title>\r\n-    <link rel=\"shortcut icon\" href=\"/assets/radiant-favicon.png\" type=\"image/x-icon\">\r\n-</head>\r\n-<body class=\"body\">\r\n-<div class=\"smooth-wrapper\">\r\n-    <div id=\"navigation-content\"></div>\r\n-    <main>\r\n+    <link\r\n+      rel=\"shortcut icon\"\r\n+      href=\"/assets/radiant-favicon.png\"\r\n+      type=\"image/x-icon\"\r\n+    />\r\n+  </head>\r\n+  <body class=\"body\">\r\n+    <div class=\"smooth-wrapper\">\r\n\\ No newline at end of file\n+      <div id=\"navigation-content\"></div>\r\n+      <main>\r\n         <div id=\"splash-content\"></div>\r\n         <div id=\"video-content\"></div>\r\n         <div id=\"ball-content\"></div>\r\n         <div id=\"diablo-content\"></div>\r\n         <div id=\"cta-content\"></div>\r\n-    </main>\r\n-</div>\r\n-<script type=\"module\" src=\"/src/setup-jquery.js\"></script>\r\n-<script type=\"module\" src=\"/src/main.js\"></script>\r\n-</body>\r\n-</html>\n+      </main>\r\n+    </div>\r\n+    <script src=\"/src/webflow-main.js\"></script>\r\n+    <script type=\"module\" src=\"/src/main.js\"></script>\r\n+  </body>\r\n+</html>\r\n"
+                },
+                {
+                    "date": 1729369456412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!DOCTYPE html>\r\n-<html lang=\"en\">\r\n+<html lang=\"en\" data-wf-site=\"611d005f5ab332c43708bc80\">\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n     <title>Radiant Energy | Lighting design | Pakistan</title>\r\n@@ -23,5 +23,5 @@\n     </div>\r\n     <script src=\"/src/webflow-main.js\"></script>\r\n     <script type=\"module\" src=\"/src/main.js\"></script>\r\n   </body>\r\n-</html>\n\\ No newline at end of file\n+</html>\r\n"
+                },
+                {
+                    "date": 1729369486699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,8 @@\n         <div id=\"diablo-content\"></div>\r\n         <div id=\"cta-content\"></div>\r\n       </main>\r\n     </div>\r\n-    <script src=\"/src/webflow-main.js\"></script>\r\n+    <!-- <script src=\"/src/webflow-main.js\"></script> -->\r\n     <script type=\"module\" src=\"/src/main.js\"></script>\r\n   </body>\r\n </html>\r\n"
+                },
+                {
+                    "date": 1729369496896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <!DOCTYPE html>\r\n-<html lang=\"en\" data-wf-site=\"611d005f5ab332c43708bc80\">\r\n+<html lang=\"en\">\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n     <title>Radiant Energy | Lighting design | Pakistan</title>\r\n@@ -20,8 +20,8 @@\n         <div id=\"diablo-content\"></div>\r\n         <div id=\"cta-content\"></div>\r\n       </main>\r\n     </div>\r\n-    <!-- <script src=\"/src/webflow-main.js\"></script> -->\r\n+    <script type=\"module\" src=\"/src/setup-jquery.js\"></script>\r\n     <script type=\"module\" src=\"/src/main.js\"></script>\r\n   </body>\r\n </html>\r\n"
+                },
+                {
+                    "date": 1729369541570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n <!DOCTYPE html>\r\n-<html lang=\"en\">\r\n+<html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n+data-wf-page=\"611d005f5ab3326e7d08bc7f\"\r\n+data-wf-site=\"611d005f5ab332c43708bc80\">\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n     <title>Radiant Energy | Lighting design | Pakistan</title>\r\n"
+                },
+                {
+                    "date": 1729369577666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <!DOCTYPE html>\r\n-<html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n-data-wf-page=\"611d005f5ab3326e7d08bc7f\"\r\n+<!-- <html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n+data-wf-page=\"611d005f5ab3326e7d08bc7f\" -->\r\n data-wf-site=\"611d005f5ab332c43708bc80\">\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n"
+                },
+                {
+                    "date": 1729369587079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <!DOCTYPE html>\r\n <!-- <html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n-data-wf-page=\"611d005f5ab3326e7d08bc7f\" -->\r\n+<!-- data-wf-page=\"611d005f5ab3326e7d08bc7f\" --> -->\r\n data-wf-site=\"611d005f5ab332c43708bc80\">\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n"
+                },
+                {
+                    "date": 1729369596209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <!DOCTYPE html>\r\n <!-- <html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n-<!-- data-wf-page=\"611d005f5ab3326e7d08bc7f\" --> -->\r\n+data-wf-page=\"611d005f5ab3326e7d08bc7f\" -->\r\n data-wf-site=\"611d005f5ab332c43708bc80\">\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n"
+                },
+                {
+                    "date": 1729369603145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <!DOCTYPE html>\r\n-<!-- <html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n-data-wf-page=\"611d005f5ab3326e7d08bc7f\" -->\r\n+<html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n+data-wf-page=\"611d005f5ab3326e7d08bc7f\"\r\n data-wf-site=\"611d005f5ab332c43708bc80\">\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n"
+                },
+                {
+                    "date": 1729369617731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <!DOCTYPE html>\r\n <html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n data-wf-page=\"611d005f5ab3326e7d08bc7f\"\r\n-data-wf-site=\"611d005f5ab332c43708bc80\">\r\n+\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n     <title>Radiant Energy | Lighting design | Pakistan</title>\r\n"
+                },
+                {
+                    "date": 1729369623625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <!DOCTYPE html>\r\n <html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n data-wf-page=\"611d005f5ab3326e7d08bc7f\"\r\n-\r\n+>\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n     <title>Radiant Energy | Lighting design | Pakistan</title>\r\n"
+                }
+            ],
+            "date": 1729368834761,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Radiant Energy | Lighting design | Pakistan</title>\r\n    <link rel=\"shortcut icon\" href=\"/assets/radiant-favicon.png\" type=\"image/x-icon\">\r\n</head>\r\n<body class=\"body\">\r\n<div class=\"smooth-wrapper\">\r\n    <div id=\"navigation-content\"></div>\r\n    <main>\r\n        <div id=\"splash-content\"></div>\r\n        <div id=\"video-content\"></div>\r\n        <div id=\"ball-content\"></div>\r\n        <div id=\"diablo-content\"></div>\r\n        <div id=\"cta-content\"></div>\r\n    </main>\r\n</div>\r\n<script type=\"module\" src=\"/src/setup-jquery.js\"></script>\r\n<script type=\"module\" src=\"/src/main.js\"></script>\r\n</body>\r\n</html>"
+        }
+    ]
+}

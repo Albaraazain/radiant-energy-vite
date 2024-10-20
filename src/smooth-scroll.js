@@ -15,64 +15,24 @@ export function initSmoothScrolling() {
         smoothTouch: true,
         touchMultiplier: 1.5,
         infinite: false,
-        lerp: 0.1,
-        wheelMultiplier: 0.7,
-        normalizeWheel: true,
     });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
 
     requestAnimationFrame(raf);
 
-    updateScrollTriggerInstances();
-    optimizePerformance();
-}
+    // Lenis and ScrollTrigger integration
+    lenis.on('scroll', ScrollTrigger.update);
 
-function updateScrollTriggerInstances() {
-    if (window.ScrollTrigger) {
-        lenis.on('scroll', ScrollTrigger.update);
-
-        ScrollTrigger.scrollerProxy(document.body, {
-            scrollTop(value) {
-                if (arguments.length) {
-                    lenis.scrollTo(value, { immediate: true });
-                }
-                return lenis.scroll;
-            },
-            getBoundingClientRect() {
-                return {
-                    top: 0,
-                    left: 0,
-                    width: window.innerWidth,
-                    height: window.innerHeight
-                };
-            },
-            pinType: document.body.style.transform ? "transform" : "fixed"
-        });
-
-        ScrollTrigger.addEventListener('refresh', () => lenis.resize());
-    }
-}
-
-function optimizePerformance() {
-    // Debounce resize events
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            lenis.resize();
-            ScrollTrigger.refresh();
-        }, 250);
-    });
-
-    // Use passive event listeners
-    window.addEventListener('scroll', () => {}, { passive: true });
-    window.addEventListener('touchstart', () => {}, { passive: true });
-
-    // Optimize animations
-    gsap.ticker.lagSmoothing(0);
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
     });
+
+    gsap.ticker.lagSmoothing(0);
 }
 
-// Expose lenis instance globally
+// Expose lenis instance globally if needed
 window.lenis = lenis;

@@ -1,0 +1,34 @@
+{
+    "sourceFile": "vite.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1729368604006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729368793303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,11 @@\n             additionalLegacyPolyfills: ['regenerator-runtime/runtime']\r\n         })\r\n     ],\r\n     define: {\r\n-        'window.jQuery': 'jQuery',\r\n-        'window.$': 'jQuery',\r\n+        // Remove these lines as we'll handle jQuery differently\r\n+        // 'window.jQuery': 'jQuery',\r\n+        // 'window.$': 'jQuery',\r\n         'global': 'window'\r\n     },\r\n     build: {\r\n         outDir: 'dist',\r\n"
+                },
+                {
+                    "date": 1729369269638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,10 @@\n             }\r\n         }\r\n     },\r\n     optimizeDeps: {\r\n-        include: ['jquery', 'gsap', '@studio-freight/lenis', 'lazysizes']\r\n+        include: ['jquery', 'gsap', '@studio-freight/lenis', 'lazysizes'],\r\n+        exclude: ['webflow-main']\r\n     },\r\n     resolve: {\r\n         alias: {\r\n             'jquery': 'jquery/dist/jquery.js',\r\n"
+                },
+                {
+                    "date": 1729369333372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,11 @@\n         // 'window.$': 'jQuery',\r\n         'global': 'window'\r\n     },\r\n     build: {\r\n+        commonjsOptions: {\r\n+            transformMixedEsModules: true,\r\n+          },\r\n         outDir: 'dist',\r\n         assetsDir: 'assets',\r\n         rollupOptions: {\r\n             output: {\r\n"
+                },
+                {
+                    "date": 1729429827038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,43 +1,43 @@\n-import { defineConfig } from 'vite';\r\n-import legacy from '@vitejs/plugin-legacy';\r\n+import { defineConfig } from \"vite\";\r\n+import legacy from \"@vitejs/plugin-legacy\";\r\n \r\n export default defineConfig({\r\n-    plugins: [\r\n-        legacy({\r\n-            targets: ['ie >= 11'],\r\n-            additionalLegacyPolyfills: ['regenerator-runtime/runtime']\r\n-        })\r\n-    ],\r\n-    define: {\r\n-        // Remove these lines as we'll handle jQuery differently\r\n-        // 'window.jQuery': 'jQuery',\r\n-        // 'window.$': 'jQuery',\r\n-        'global': 'window'\r\n+  plugins: [\r\n+    legacy({\r\n+      targets: [\"ie >= 11\"],\r\n+      additionalLegacyPolyfills: [\"regenerator-runtime/runtime\"],\r\n+    }),\r\n+  ],\r\n+  define: {\r\n+    // Remove these lines as we'll handle jQuery differently\r\n+    // 'window.jQuery': 'jQuery',\r\n+    // 'window.$': 'jQuery',\r\n+    global: \"window\",\r\n+  },\r\n+  build: {\r\n+    commonjsOptions: {\r\n+      transformMixedEsModules: true,\r\n     },\r\n-    build: {\r\n-        commonjsOptions: {\r\n-            transformMixedEsModules: true,\r\n-          },\r\n-        outDir: 'dist',\r\n-        assetsDir: 'assets',\r\n-        rollupOptions: {\r\n-            output: {\r\n-                manualChunks: {\r\n-                    jquery: ['jquery'],\r\n\\ No newline at end of file\n-                    gsap: ['gsap'],\r\n-                    lenis: ['@studio-freight/lenis'],\r\n-                    lazysizes: ['lazysizes']\r\n-                }\r\n-            }\r\n-        }\r\n+    outDir: \"dist\",\r\n+    assetsDir: \"assets\",\r\n+    rollupOptions: {\r\n+      output: {\r\n+        manualChunks: {\r\n+          jquery: [\"jquery\"],\r\n+          gsap: [\"gsap\"],\r\n+          lenis: [\"@studio-freight/lenis\"],\r\n+          lazysizes: [\"lazysizes\"],\r\n+        },\r\n+      },\r\n     },\r\n-    optimizeDeps: {\r\n-        include: ['jquery', 'gsap', '@studio-freight/lenis', 'lazysizes'],\r\n-        exclude: ['webflow-main']\r\n+  },\r\n+  optimizeDeps: {\r\n+    include: [\"jquery\", \"gsap\", \"@studio-freight/lenis\", \"lazysizes\"],\r\n+    exclude: [\"webflow-main\"],\r\n+  },\r\n+  resolve: {\r\n+    alias: {\r\n+      jquery: \"jquery/dist/jquery.js\",\r\n     },\r\n-    resolve: {\r\n-        alias: {\r\n-            'jquery': 'jquery/dist/jquery.js',\r\n-        }\r\n-    }\r\n-});\n+  },\r\n+});\r\n"
+                }
+            ],
+            "date": 1729368604006,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from 'vite';\r\nimport legacy from '@vitejs/plugin-legacy';\r\n\r\nexport default defineConfig({\r\n    plugins: [\r\n        legacy({\r\n            targets: ['ie >= 11'],\r\n            additionalLegacyPolyfills: ['regenerator-runtime/runtime']\r\n        })\r\n    ],\r\n    define: {\r\n        'window.jQuery': 'jQuery',\r\n        'window.$': 'jQuery',\r\n        'global': 'window'\r\n    },\r\n    build: {\r\n        outDir: 'dist',\r\n        assetsDir: 'assets',\r\n        rollupOptions: {\r\n            output: {\r\n                manualChunks: {\r\n                    jquery: ['jquery'],\r\n                    gsap: ['gsap'],\r\n                    lenis: ['@studio-freight/lenis'],\r\n                    lazysizes: ['lazysizes']\r\n                }\r\n            }\r\n        }\r\n    },\r\n    optimizeDeps: {\r\n        include: ['jquery', 'gsap', '@studio-freight/lenis', 'lazysizes']\r\n    },\r\n    resolve: {\r\n        alias: {\r\n            'jquery': 'jquery/dist/jquery.js',\r\n        }\r\n    }\r\n});"
+        }
+    ]
+}

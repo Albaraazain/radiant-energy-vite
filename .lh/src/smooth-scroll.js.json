@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/smooth-scroll.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729368993323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729368993323,
+            "name": "Commit-0",
+            "content": "import Lenis from '@studio-freight/lenis';\r\nimport { gsap } from 'gsap';\r\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\r\n\r\nlet lenis;\r\n\r\nexport function initSmoothScrolling() {\r\n    lenis = new Lenis({\r\n        duration: 1.5,\r\n        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),\r\n        direction: 'vertical',\r\n        gestureDirection: 'vertical',\r\n        smooth: true,\r\n        mouseMultiplier: 0.8,\r\n        smoothTouch: true,\r\n        touchMultiplier: 1.5,\r\n        infinite: false,\r\n    });\r\n\r\n    function raf(time) {\r\n        lenis.raf(time);\r\n        requestAnimationFrame(raf);\r\n    }\r\n\r\n    requestAnimationFrame(raf);\r\n\r\n    // Lenis and ScrollTrigger integration\r\n    lenis.on('scroll', ScrollTrigger.update);\r\n\r\n    gsap.ticker.add((time) => {\r\n        lenis.raf(time * 1000);\r\n    });\r\n\r\n    gsap.ticker.lagSmoothing(0);\r\n}\r\n\r\n// Expose lenis instance globally if needed\r\nwindow.lenis = lenis;"
+        }
+    ]
+}

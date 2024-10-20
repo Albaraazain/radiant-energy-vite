@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/setup-jquery.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729368818178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729368818178,
+            "name": "Commit-0",
+            "content": "import jQuery from 'jquery';\r\n\r\nwindow.jQuery = window.$ = jQuery;"
+        }
+    ]
+}
