@@ -1,6 +1,6 @@
 import './styles/main.css';
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'lazysizes';
 
 import { initNavigation } from './components/navigation';
@@ -9,9 +9,8 @@ import { initVideo } from './components/video';
 import { initBall } from './components/ball';
 import { initDiablo } from './components/diablo';
 import { initCta } from './components/cta';
+import { initProductShowcase } from './components/product-showcase';
 import { initSmoothScrolling } from './smooth-scroll';
-
-// Import the Webflow-specific code
 import { initWebflow } from './webflow-main';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSplash();
     initVideo();
     initBall();
+    initProductShowcase(gsap);  // Pass gsap here
     initDiablo();
     initCta();
     
@@ -28,6 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScrolling();
     
     initWebflow();
-    
-    // Any other initialization code...
 });

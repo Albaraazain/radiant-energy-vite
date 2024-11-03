@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 12,
+            "activePatchIndex": 19,
             "patches": [
                 {
                     "date": 1729368461256,
@@ -56,6 +56,34 @@
                 {
                     "date": 1729430687167,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import './styles/main.css';\r\n-import { gsap } from 'gsap';\r\n-import { ScrollTrigger } from 'gsap/ScrollTrigger';\r\n+import { gsap } from 'gsap/dist/gsap';\r\n+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';\r\n import 'lazysizes';\r\n \r\n import { initNavigation } from './components/navigation';\r\n import { initSplash } from './components/splash';\r\n"
+                },
+                {
+                    "date": 1729586593304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n     initNavigation();\r\n     initSplash();\r\n     initVideo();\r\n     initBall();\r\n+    initProductShowcase();\r\n     initDiablo();\r\n     initCta();\r\n     \r\n     // Initialize smooth scrolling\r\n"
+                },
+                {
+                    "date": 1729586769843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import { initNavigation } from './components/navigation';\r\n import { initSplash } from './components/splash';\r\n import { initVideo } from './components/video';\r\n import { initBall } from './components/ball';\r\n+import { initProductShowcase } from './components/product-showcase';\r\n import { initDiablo } from './components/diablo';\r\n import { initCta } from './components/cta';\r\n import { initSmoothScrolling } from './smooth-scroll';\r\n \r\n"
+                },
+                {
+                    "date": 1729586842935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,14 +6,12 @@\n import { initNavigation } from './components/navigation';\r\n import { initSplash } from './components/splash';\r\n import { initVideo } from './components/video';\r\n import { initBall } from './components/ball';\r\n-import { initProductShowcase } from './components/product-showcase';\r\n import { initDiablo } from './components/diablo';\r\n import { initCta } from './components/cta';\r\n+import { initProductShowcase } from './components/product-showcase';\r\n import { initSmoothScrolling } from './smooth-scroll';\r\n-\r\n-// Import the Webflow-specific code\r\n import { initWebflow } from './webflow-main';\r\n \r\n gsap.registerPlugin(ScrollTrigger);\r\n \r\n@@ -21,15 +19,13 @@\n     initNavigation();\r\n     initSplash();\r\n     initVideo();\r\n     initBall();\r\n-    initProductShowcase();\r\n+    initProductShowcase(gsap);  // Pass gsap here\r\n     initDiablo();\r\n     initCta();\r\n     \r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n     initWebflow();\r\n-    \r\n-    // Any other initialization code...\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729773612931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n gsap.registerPlugin(ScrollTrigger);\r\n \r\n document.addEventListener('DOMContentLoaded', () => {\r\n     initNavigation();\r\n-    initSplash();\r\n+    initSplash(gsap);\r\n     initVideo();\r\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n     initDiablo();\r\n"
+                },
+                {
+                    "date": 1729773906302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import './styles/main.css';\r\n+import { gsap } from 'gsap';\r\n+import { ScrollTrigger } from 'gsap/ScrollTrigger';\r\n+import 'lazysizes';\r\n+\r\n+import { initNavigation } from './components/navigation';\r\n+import { initSplash } from './components/splash';\r\n+import { initVideo } from './components/video';\r\n+import { initBall } from './components/ball';\r\n+import { initDiablo } from './components/diablo';\r\n+import { initCta } from './components/cta';\r\n+import { initProductShowcase } from './components/product-showcase';\r\n+import { initSmoothScrolling } from './smooth-scroll';\r\n+import { initWebflow } from './webflow-main';\r\n+\r\n+gsap.registerPlugin(ScrollTrigger);\r\n+\r\n+document.addEventListener('DOMContentLoaded', () => {\r\n+    initNavigation();\r\n+    initSplash(gsap);\r\n+    initVideo();\r\n+    initBall();\r\n+    initProductShowcase(gsap);  // Pass gsap here\r\n+    initDiablo();\r\n+    initCta();\r\n+    \r\n+    // Initialize smooth scrolling\r\n+    initSmoothScrolling();\r\n+    \r\n+    initWebflow();\r\n+});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729773912964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,36 +27,5 @@\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n     initWebflow();\r\n-});\n-import './styles/main.css';\r\n-import { gsap } from 'gsap/dist/gsap';\r\n-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';\r\n-import 'lazysizes';\r\n-\r\n-import { initNavigation } from './components/navigation';\r\n-import { initSplash } from './components/splash';\r\n-import { initVideo } from './components/video';\r\n-import { initBall } from './components/ball';\r\n-import { initDiablo } from './components/diablo';\r\n-import { initCta } from './components/cta';\r\n-import { initProductShowcase } from './components/product-showcase';\r\n-import { initSmoothScrolling } from './smooth-scroll';\r\n-import { initWebflow } from './webflow-main';\r\n-\r\n-gsap.registerPlugin(ScrollTrigger);\r\n-\r\n-document.addEventListener('DOMContentLoaded', () => {\r\n-    initNavigation();\r\n-    initSplash(gsap);\r\n-    initVideo();\r\n-    initBall();\r\n-    initProductShowcase(gsap);  // Pass gsap here\r\n-    initDiablo();\r\n-    initCta();\r\n-    \r\n-    // Initialize smooth scrolling\r\n-    initSmoothScrolling();\r\n-    \r\n-    initWebflow();\r\n });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1729773979521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n gsap.registerPlugin(ScrollTrigger);\r\n \r\n document.addEventListener('DOMContentLoaded', () => {\r\n     initNavigation();\r\n-    initSplash(gsap);\r\n+    initSplash();\r\n     initVideo();\r\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n     initDiablo();\r\n"
                 }
             ],
             "date": 1729368461256,

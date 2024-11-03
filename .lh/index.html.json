@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 13,
             "patches": [
                 {
                     "date": 1729368834761,
@@ -52,6 +52,14 @@
                 {
                     "date": 1729369623625,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <!DOCTYPE html>\r\n <html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n data-wf-page=\"611d005f5ab3326e7d08bc7f\"\r\n-\r\n+>\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n     <title>Radiant Energy | Lighting design | Pakistan</title>\r\n"
+                },
+                {
+                    "date": 1729586574480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,10 @@\n       <main>\r\n         <div id=\"splash-content\"></div>\r\n         <div id=\"video-content\"></div>\r\n         <div id=\"ball-content\"></div>\r\n+        <div id=\"product-showcase-content\"></div>\r\n+\r\n         <div id=\"diablo-content\"></div>\r\n         <div id=\"cta-content\"></div>\r\n       </main>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1729773990422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n <!DOCTYPE html>\r\n-<html lang=\"en\" data-wf-domain=\"radiantenergy.com\"\r\n-data-wf-page=\"611d005f5ab3326e7d08bc7f\"\r\n+<html\r\n+  lang=\"en\"\r\n+  data-wf-domain=\"radiantenergy.com\"\r\n+  data-wf-page=\"611d005f5ab3326e7d08bc7f\"\r\n >\r\n   <head>\r\n     <meta charset=\"UTF-8\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n"
                 }
             ],
             "date": 1729368834761,

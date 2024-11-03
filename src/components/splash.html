@@ -1,0 +1,125 @@
+<!-- HTML -->
+<div class="subheading trigger-2">
+    <h2 class="h1">
+        Radiant Energy specializes in advanced
+        <span class="keyword" data-images='["lighting-1", "lighting-2", "lighting-3"]'>lighting</span>,
+        innovative <span class="keyword" data-images='["solar-1", "solar-2"]'>solar</span>,
+        and comprehensive <span class="keyword" data-images='["industrial-1"]'>industrial</span>
+        solutions for a sustainable future.
+    </h2>
+    <div class="hover-image" id="hoverImage"></div>
+</div>
+
+<style>
+    /* CSS */
+    .h1 {
+        position: relative;
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    .keyword {
+        color: #3366cc;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+
+    .keyword:hover {
+        color: #1a4ba3;
+    }
+
+    .hover-image {
+        position: absolute;
+        top: 50%;
+        right: -420px;
+        transform: translateY(-50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .hover-image img {
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .hover-image img.active {
+        opacity: 1;
+    }
+
+    /* Ensure the parent container has proper positioning */
+    .subheading {
+        position: relative;
+    }
+
+    /* Custom colors for each keyword */
+    .keyword[data-images*="lighting"] { color: #ffd700; }
+    .keyword[data-images*="lighting"]:hover { color: #ffb700; }
+
+    .keyword[data-images*="solar"] { color: #4CAF50; }
+    .keyword[data-images*="solar"]:hover { color: #388E3C; }
+
+    .keyword[data-images*="industrial"] { color: #2196F3; }
+    .keyword[data-images*="industrial"]:hover { color: #1976D2; }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hoverImage = document.getElementById('hoverImage');
+        const keywords = document.querySelectorAll('.keyword');
+        let imageInterval;
+        let currentImageIndex = 0;
+
+        function rotateImages(images) {
+            // Clear previous interval if exists
+            if (imageInterval) {
+                clearInterval(imageInterval);
+            }
+
+            // Clear previous images
+            hoverImage.innerHTML = '';
+
+            // Create and append all images
+            images.forEach((image, index) => {
+                const img = document.createElement('img');
+                img.src = `/assets/${image}.png`; // Adjust path as needed
+                img.alt = `Feature image ${index + 1}`;
+                img.className = index === 0 ? 'active' : '';
+                hoverImage.appendChild(img);
+            });
+
+            // If there's more than one image, start rotation
+            if (images.length > 1) {
+                currentImageIndex = 0;
+                imageInterval = setInterval(() => {
+                    const imgs = hoverImage.querySelectorAll('img');
+                    imgs[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    imgs[currentImageIndex].classList.add('active');
+                }, 2000); // Change image every 2 seconds
+            }
+        }
+
+        keywords.forEach(keyword => {
+            keyword.addEventListener('mouseenter', function() {
+                const images = JSON.parse(this.getAttribute('data-images'));
+                hoverImage.style.opacity = '1';
+                rotateImages(images);
+            });
+
+            keyword.addEventListener('mouseleave', function() {
+                hoverImage.style.opacity = '0';
+                if (imageInterval) {
+                    clearInterval(imageInterval);
+                }
+            });
+        });
+    });
+</script>
