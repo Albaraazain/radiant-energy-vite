@@ -24,11 +24,11 @@ const products = [
     },
     {
         id: "product-3",
-        title: "Industrial Solutions",
-        description: "Industrial Solutions for a smarter, more efficient, and sustainable future.",
-        image: "/assets/industrial-1.png",
+        title: "Transformers",
+        description: "High-performance power distribution solutions engineered for reliability and efficiency.",
+        image: "/assets/transformer-solutions.jpg",
         features: ["Smart Control", "Load Management", "IoT Ready"],
-        link: "/services/industrial",
+        link: "/services/transformers",
         gradientClass: "gradient-3",
         floatingNumber: "03"
     }

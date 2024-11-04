@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 25,
+            "activePatchIndex": 26,
             "patches": [
                 {
                     "date": 1729368461256,
@@ -108,6 +108,10 @@
                 {
                     "date": 1730712064232,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,11 @@\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n     // initIndustrialSlider(gsap);\r\n     initDiablo();\r\n+    initCta();\r\n     initIndustrialSlider();\r\n-    initCta();\r\n+\r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n     initWebflow();\r\n"
+                },
+                {
+                    "date": 1730739664060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,8 @@\n     initProductShowcase(gsap);  // Pass gsap here\r\n     // initIndustrialSlider(gsap);\r\n     initDiablo();\r\n     initCta();\r\n-    initIndustrialSlider();\r\n \r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n"
                 }
             ],
             "date": 1729368461256,

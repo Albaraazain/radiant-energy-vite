@@ -1,0 +1,232 @@
+.s-products {
+    position: relative;
+    padding: 15vh 0;
+    background-color: #000;
+    color: #fff;
+    z-index: 20;
+    overflow: hidden;
+  }
+  
+  .products-header {
+    text-align: center;
+    margin-bottom: 12vh;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Use 2-column grid for wider display on desktop */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2vw;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .product-card {
+    grid-column: span 6; /* Each card spans half the width */
+    position: relative;
+    height: 450px; /* Adjust height for landscape orientation */
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  /* Make larger card optional, or keep all cards the same size */
+  .product-card.large {
+    grid-column: span 6;
+  }
+  
+  .product-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .product-image-parallax {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  .product-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .product-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  
+  .gradient-1 {
+    background: linear-gradient(
+      45deg,
+      rgba(0, 229, 210, 0.3),
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+  
+  .gradient-2 {
+    background: linear-gradient(
+      45deg,
+      rgba(252, 68, 15, 0.3),
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+  
+  .gradient-3 {
+    background: linear-gradient(
+      45deg,
+      rgba(113, 167, 254, 0.3),
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+  
+  .floating-text {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+  }
+  
+  .floating-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .reveal-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .content-inner {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .product-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00e5d2;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  
+  .product-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .feature-tag {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    transition: background 0.3s ease;
+  }
+  
+  .text-link {
+    display: inline-block;
+    position: relative;
+    margin-top: 1.5rem;
+  }
+  
+  .text-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #00e5d2;
+    transition: width 0.3s ease;
+  }
+  
+  .text-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Adjust grid for smaller screens */
+  @media screen and (max-width: 991px) {
+    .products-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  
+    .product-card,
+    .product-card.large {
+      grid-column: span 6;
+      height: 400px; /* Reduced height for smaller screens */
+    }
+  }
+  
+  /* Single-column layout on small mobile screens */
+  @media screen and (max-width: 767px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .product-card,
+    .product-card.large {
+      height: 350px;
+    }
+  
+    .floating-number {
+      font-size: 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+    .product-card,
+    .product-card.large {
+      height: 300px;
+    }
+  
+    .product-stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  

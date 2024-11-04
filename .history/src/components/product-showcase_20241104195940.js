@@ -6,7 +6,7 @@ const products = [
         id: "product-1",
         title: "Lightning Systems",
         description: "Advanced LED solutions designed for maximum efficiency and minimal environmental impact.",
-        image: "/assets/lighting-1.png",
+        image: "/assets/lighting-solutions.jpg",
         features: ["90% Energy Saving", "50K Hours Lifespan"],
         link: "/services/lightning",
         gradientClass: "gradient-1",
@@ -16,7 +16,7 @@ const products = [
         id: "product-2",
         title: "Solar Systems",
         description: "Sustainable energy solutions powering a greener tomorrow with cutting-edge solar technology.",
-        image: "/assets/solar-5.png",
+        image: "/assets/solar-solutions.jpg",
         features: ["High Efficiency", "Smart Grid", "Energy Storage"],
         link: "/services/solar",
         gradientClass: "gradient-2",
@@ -24,11 +24,11 @@ const products = [
     },
     {
         id: "product-3",
-        title: "Industrial Solutions",
-        description: "Industrial Solutions for a smarter, more efficient, and sustainable future.",
-        image: "/assets/industrial-1.png",
+        title: "Transformers",
+        description: "High-performance power distribution solutions engineered for reliability and efficiency.",
+        image: "/assets/transformer-solutions.jpg",
         features: ["Smart Control", "Load Management", "IoT Ready"],
-        link: "/services/industrial",
+        link: "/services/transformers",
         gradientClass: "gradient-3",
         floatingNumber: "03"
     }

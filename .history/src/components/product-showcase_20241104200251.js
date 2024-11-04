@@ -28,7 +28,7 @@ const products = [
         description: "Industrial Solutions for a smarter, more efficient, and sustainable future.",
         image: "/assets/industrial-1.png",
         features: ["Smart Control", "Load Management", "IoT Ready"],
-        link: "/services/industrial",
+        link: "/services/transformers",
         gradientClass: "gradient-3",
         floatingNumber: "03"
     }
