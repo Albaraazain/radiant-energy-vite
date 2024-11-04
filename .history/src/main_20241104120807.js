@@ -24,9 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initProductShowcase(gsap);  // Pass gsap here
     // initIndustrialSlider(gsap);
     initDiablo();
-    initCta();
     initIndustrialSlider();
-
+    initCta();
     // Initialize smooth scrolling
     initSmoothScrolling();
     

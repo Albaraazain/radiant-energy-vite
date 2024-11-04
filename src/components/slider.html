@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Industrial Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mn_slr_wrap {
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .mn_slr {
+            height: 36.51vw;
+            padding-left: 25.26vw;
+        }
+
+        .swiper-slide {
+            width: 56.719vw;
+        }
+
+        .caption {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .caption img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            object-fit: cover;
+            object-position: 50% 50%;
+            width: 100%;
+            height: 100%;
+            transform-origin: 0 0;
+            transform: scale(0.85);
+            transition: 1.4s;
+        }
+
+        .swiper-slide-active .caption img {
+            transform: scale(1);
+        }
+
+        .s_ttl {
+            position: relative;
+            z-index: 20;
+            padding: 2.917vw 2.76vw;
+        }
+
+        .h4 {
+            color: #fff;
+            font-size: 1.875vw;
+            line-height: 2.135vw;
+            letter-spacing: -0.047vw;
+        }
+
+        .s_ttl p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.833vw;
+            line-height: 2.135vw;
+            letter-spacing: 0.008vw;
+            margin: 1.927vw 0 0;
+        }
+
+        .ovr {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            background: #0f1318;
+            transform-origin: 0 50%;
+            z-index: 20;
+        }
+
+        .s_nav {
+            position: relative;
+            width: 7.083vw;
+            height: 3.385vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2vw;
+            margin-left: 28.021vw;
+        }
+
+        .s_prev, .s_next {
+            position: relative;
+            width: 3.385vw;
+            height: 100%;
+            background: transparent;
+            border-radius: 100%;
+            border: 0.052vw solid #fff;
+            transition: 0.35s;
+            cursor: pointer;
+        }
+
+        .s_prev span, .s_next span {
+            transition: 0.35s;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 1.302vw;
+            height: 1.042vw;
+        }
+
+        @media (max-width: 768px) {
+            .mn_slr {
+                height: 519px;
+                padding-left: 10px;
+            }
+
+            .swiper-slide {
+                width: 355px;
+            }
+
+            .s_nav {
+                width: 101px;
+                height: 48px;
+                margin: 42px auto 0;
+            }
+
+            .s_prev, .s_next {
+                width: 48px;
+                border: 1px solid #000;
+            }
+
+            .s_prev span, .s_next span {
+                width: 18px;
+                height: 13px;
+            }
+
+            .h4 {
+                font-size: 27px;
+                line-height: 30px;
+            }
+
+            .s_ttl p {
+                font-size: 13px;
+                line-height: 18px;
+                margin-top: 21px;
+            }
+        }
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>Industrial Slider</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+        <style>
+             /* ... Previous styles remain the same ... */
+
+         .s_prev span {
+             background: url("data:image/svg+xml,%3Csvg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.585785 9.58579C0.195262 9.97631 0.195262 10.6095 0.585785 11L7.58579 18C7.97631 18.3905 8.60948 18.3905 9 18C9.39052 17.6095 9.39052 16.9763 9 16.5858L2.91422 10.5L9 4.41421C9.39052 4.02369 9.39052 3.39052 9 3C8.60948 2.60948 7.97631 2.60948 7.58579 3L0.585785 9.58579ZM25 9.25L1.5 9.25V11.25L25 11.25V9.25Z' fill='white'/%3E%3C/svg%3E") no-repeat center;
+             width: 100%;
+             height: 100%;
+         }
+
+        .s_next span {
+            background: url("data:image/svg+xml,%3Csvg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.4142 11C24.8047 10.6095 24.8047 9.97631 24.4142 9.58579L17.4142 2.58579C17.0237 2.19526 16.3905 2.19526 16 2.58579C15.6095 2.97631 15.6095 3.60948 16 4L22.0858 10.5L16 16.5858C15.6095 16.9763 15.6095 17.6095 16 18C16.3905 18.3905 17.0237 18.3905 17.4142 18L24.4142 11.4142L24.4142 11ZM0 11.25L23.5 11.25L23.5 9.25L0 9.25L0 11.25Z' fill='white'/%3E%3C/svg%3E") no-repeat center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .s_prev:hover span {
+            background: url("data:image/svg+xml,%3Csvg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.585785 9.58579C0.195262 9.97631 0.195262 10.6095 0.585785 11L7.58579 18C7.97631 18.3905 8.60948 18.3905 9 18C9.39052 17.6095 9.39052 16.9763 9 16.5858L2.91422 10.5L9 4.41421C9.39052 4.02369 9.39052 3.39052 9 3C8.60948 2.60948 7.97631 2.60948 7.58579 3L0.585785 9.58579ZM25 9.25L1.5 9.25V11.25L25 11.25V9.25Z' fill='%230f1318'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        .s_next:hover span {
+            background: url("data:image/svg+xml,%3Csvg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.4142 11C24.8047 10.6095 24.8047 9.97631 24.4142 9.58579L17.4142 2.58579C17.0237 2.19526 16.3905 2.19526 16 2.58579C15.6095 2.97631 15.6095 3.60948 16 4L22.0858 10.5L16 16.5858C15.6095 16.9763 15.6095 17.6095 16 18C16.3905 18.3905 17.0237 18.3905 17.4142 18L24.4142 11.4142L24.4142 11ZM0 11.25L23.5 11.25L23.5 9.25L0 9.25L0 11.25Z' fill='%230f1318'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        .s_prev:hover, .s_next:hover {
+            background: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .s_prev span {
+                background: url("data:image/svg+xml,%3Csvg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.585785 9.58579C0.195262 9.97631 0.195262 10.6095 0.585785 11L7.58579 18C7.97631 18.3905 8.60948 18.3905 9 18C9.39052 17.6095 9.39052 16.9763 9 16.5858L2.91422 10.5L9 4.41421C9.39052 4.02369 9.39052 3.39052 9 3C8.60948 2.60948 7.97631 2.60948 7.58579 3L0.585785 9.58579ZM25 9.25L1.5 9.25V11.25L25 11.25V9.25Z' fill='%230f1318'/%3E%3C/svg%3E") no-repeat center;
+            }
+
+            .s_next span {
+                background: url("data:image/svg+xml,%3Csvg width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.4142 11C24.8047 10.6095 24.8047 9.97631 24.4142 9.58579L17.4142 2.58579C17.0237 2.19526 16.3905 2.19526 16 2.58579C15.6095 2.97631 15.6095 3.60948 16 4L22.0858 10.5L16 16.5858C15.6095 16.9763 15.6095 17.6095 16 18C16.3905 18.3905 17.0237 18.3905 17.4142 18L24.4142 11.4142L24.4142 11ZM0 11.25L23.5 11.25L23.5 9.25L0 9.25L0 11.25Z' fill='%230f1318'/%3E%3C/svg%3E") no-repeat center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="mn_slr_wrap">
+    <div class="swiper mn_slr">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="caption">
+                    <img src="/assets/lighting-2.png" alt="Industrial 1">
+                    <div class="s_ttl">
+                        <div class="h4">Свои строительные <span class="br">бригады</span></div>
+                        <p>Проверенные профессионалы</p>
+                    </div>
+                    <div class="ovr"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="caption">
+                    <img src="/assets/solar-5.png" alt="Industrial 2">
+                    <div class="s_ttl">
+                        <div class="h4">Полная проверка <span class="br">комплектующих</span></div>
+                        <p>Комплексная проверка всех комплектующих.</p>
+                    </div>
+                    <div class="ovr"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="caption">
+                    <img src="/assets/industrial-3.png" alt="Industrial 3">
+                    <div class="s_ttl">
+                        <div class="h4">Свои строительные <span class="br">бригады</span></div>
+                        <p>Проверенные профессионалы</p>
+                    </div>
+                    <div class="ovr"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="s_nav">
+        <div class="s_prev"><span></span></div>
+        <div class="s_next"><span></span></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.mn_slr', {
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+        speed: 1000,
+        navigation: {
+            nextEl: '.s_next',
+            prevEl: '.s_prev'
+        },
+        on: {
+            init: function() {
+                updateSlides(this);
+            },
+            slideChange: function() {
+                updateSlides(this);
+            }
+        }
+    });
+
+    function updateSlides(swiper) {
+        const slides = swiper.slides;
+        slides.forEach((slide, index) => {
+            const overlay = slide.querySelector('.ovr');
+            if (overlay) {
+                if (index === swiper.activeIndex) {
+                    overlay.style.transform = 'scale(0, 1)';
+                } else {
+                    overlay.style.transform = 'scale(1, 1)';
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

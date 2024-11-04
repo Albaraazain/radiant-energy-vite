@@ -12,7 +12,7 @@ import { initCta } from './components/cta';
 import { initProductShowcase } from './components/product-showcase';
 import { initSmoothScrolling } from './smooth-scroll';
 import { initWebflow } from './webflow-main';
-import { industrialSliderContent, initIndustrialSlider } from './components/slider';
+import { initIndustrialSlider } from './components/slider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // initIndustrialSlider(gsap);
     initDiablo();
     initCta();
-    initIndustrialSlider();
-
     // Initialize smooth scrolling
     initSmoothScrolling();
     

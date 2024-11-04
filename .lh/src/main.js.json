@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 25,
             "patches": [
                 {
                     "date": 1729368461256,
@@ -84,6 +84,30 @@
                 {
                     "date": 1729773979521,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n gsap.registerPlugin(ScrollTrigger);\r\n \r\n document.addEventListener('DOMContentLoaded', () => {\r\n     initNavigation();\r\n-    initSplash(gsap);\r\n+    initSplash();\r\n     initVideo();\r\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n     initDiablo();\r\n"
+                },
+                {
+                    "date": 1730709421631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n import { initCta } from './components/cta';\r\n import { initProductShowcase } from './components/product-showcase';\r\n import { initSmoothScrolling } from './smooth-scroll';\r\n import { initWebflow } from './webflow-main';\r\n+import { initIndustrialSlider } from './components/slider';\r\n \r\n gsap.registerPlugin(ScrollTrigger);\r\n \r\n document.addEventListener('DOMContentLoaded', () => {\r\n@@ -22,9 +23,9 @@\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n     initDiablo();\r\n     initCta();\r\n-    \r\n+    initIndustrialSlider(gsap);\r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n     initWebflow();\r\n"
+                },
+                {
+                    "date": 1730709434506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,11 +21,11 @@\n     initSplash();\r\n     initVideo();\r\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n+    initIndustrialSlider(gsap);\r\n     initDiablo();\r\n     initCta();\r\n-    initIndustrialSlider(gsap);\r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n     initWebflow();\r\n"
+                },
+                {
+                    "date": 1730709465340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     initSplash();\r\n     initVideo();\r\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n-    initIndustrialSlider(gsap);\r\n+    // initIndustrialSlider(gsap);\r\n     initDiablo();\r\n     initCta();\r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n"
+                },
+                {
+                    "date": 1730709491226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n import { initCta } from './components/cta';\r\n import { initProductShowcase } from './components/product-showcase';\r\n import { initSmoothScrolling } from './smooth-scroll';\r\n import { initWebflow } from './webflow-main';\r\n-import { initIndustrialSlider } from './components/slider';\r\n+import { industrialSliderContent, initIndustrialSlider } from './components/slider';\r\n \r\n gsap.registerPlugin(ScrollTrigger);\r\n \r\n document.addEventListener('DOMContentLoaded', () => {\r\n@@ -23,8 +23,9 @@\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n     // initIndustrialSlider(gsap);\r\n     initDiablo();\r\n+    industrialSliderContent();\r\n     initCta();\r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n"
+                },
+                {
+                    "date": 1730709512441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n     // initIndustrialSlider(gsap);\r\n     initDiablo();\r\n-    industrialSliderContent();\r\n+    initIndustrialSlider();\r\n     initCta();\r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n"
+                },
+                {
+                    "date": 1730712064232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,11 @@\n     initBall();\r\n     initProductShowcase(gsap);  // Pass gsap here\r\n     // initIndustrialSlider(gsap);\r\n     initDiablo();\r\n+    initCta();\r\n     initIndustrialSlider();\r\n-    initCta();\r\n+\r\n     // Initialize smooth scrolling\r\n     initSmoothScrolling();\r\n     \r\n     initWebflow();\r\n"
                 }
             ],
             "date": 1729368461256,
